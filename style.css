@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body{
     display:flex;
@@ -9,49 +9,53 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    background-color:antiquewhite;
 }
-body>*{
-        background-color:antiquewhite;
-        
-}
-.black-cover>*{
+.heading{
     color: aliceblue;
 }
-
-
+.black-cover>*{
+    color:white;
+    font-size: 20px;
+    font-weight: 200;
+}
 .hero-sec{
-    padding-top: 5vh;
-    height: 93vh;
+    width: 100vw;
+    height: 92vh;
     color:white;
     display: flex;
     flex-direction:column;
     justify-content:center;
     align-items: center; 
 }
+.hero-sec h1 {
+    color: white !important;
+  }
 .black-cover{
-    background-color: rgba(0, 0, 0, 0.415);
-    padding:  50vh 20vh 40vh 20vh;
-
+    background-color: rgba(0, 0, 0, 0.532);
+    padding:35vh 0 27vh 0;
 }
 .backg{
-   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(76, 45, 45, 0.1)),
-              url("images/eye.png") no-repeat center/cover;
+   background: linear-gradient(rgba(234, 193, 193, 0.2), rgba(170, 142, 142, 0.1)),
+              url("./images/backg.png") no-repeat center/cover;
     background-repeat: no-repeat;
     background-size:contain;
 }
 button{
-    background-color: rgb(135, 233, 108);
+    background-color: rgba(83, 178, 237, 0.934);
     padding: 15px;
     font-size:15px;
+    margin-top: 5px;
+    color:rgba(0, 0, 0, 0.656);
+    border:solid  rgba(0, 0, 0, 0.273) 1px;
     border-radius: 10px;
     position: relative;
-    top:30vh;
-    left: 50vw;
+}
+.container{
+    margin-top: 20vh;
 }
 footer{
     position: relative;
-    bottom: -30vh;
+    bottom: -20vh;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -66,16 +70,20 @@ footer>p{
 .cb{
     background-color: rgb(187, 186, 183);
 }
-.line{
-    width: 60vw;
-    height: 1px;
-    background-color: rgb(37, 37, 40);
-    margin-bottom: 0.5vh;
-}
 .rules{
-    position: relative;
     width: 80vw;
     height:60vh ;
-    left: 20vh;
-    background-color: brown;
+    border-radius: 15px;
+    background-color: rgba(92, 33, 33, 0.556);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back-btn{
+    width: 6vw;
+}
+.rules>*{
+    font-size:25px ;
+    padding-top: 10px;
 }
