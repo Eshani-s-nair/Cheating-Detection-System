@@ -2,7 +2,12 @@ import cv2
 import time
 from ultralytics import YOLO
 import mediapipe as mp
+<<<<<<< HEAD
 from flask import Flask, render_template, Response, redirect, url_for
+=======
+from flask import Flask, render_template, Response
+
+>>>>>>> 9ee3f5b881bc1a4256e55264e15e9b13e072eb00
 # YOLO
 model = YOLO('yolov8n.pt')
 app= Flask(__name__)
@@ -32,8 +37,12 @@ disqualified = False
 def stop():
     global recording
     recording = False
+<<<<<<< HEAD
     # 👇 This line makes the backend redirect the user to "/"
     return redirect(url_for('home'))
+=======
+    return "Recording stopped"
+>>>>>>> 9ee3f5b881bc1a4256e55264e15e9b13e072eb00
 def videoCap():
     global recording
     global face_missing_start, head_turn_start, phone_detected_start
@@ -185,6 +194,7 @@ def videoCap():
 
 @app.route('/')
 def home():
+<<<<<<< HEAD
     return render_template("index.html")
 
 @app.route('/connect')
@@ -194,6 +204,9 @@ def connect():
 def rule():
     return render_template("rule.html")
 
+=======
+    return render_template("connect.html")
+>>>>>>> 9ee3f5b881bc1a4256e55264e15e9b13e072eb00
 @app.route('/video')
 def video():
     return Response(videoCap(),mimetype="multipart/x-mixed-replace; boundary=frame")
