@@ -36,18 +36,24 @@ body{
 }
 .backg{
    background: linear-gradient(rgba(234, 193, 193, 0.2), rgba(170, 142, 142, 0.1)),
-              url("./images/backg.png") no-repeat center/cover;
+              url("/static/images/backg.png") no-repeat center/cover;
     background-repeat: no-repeat;
     background-size:contain;
+}
+.bg{
+    background-color: antiquewhite;
+    padding-left: 6vw;
+    padding-right: 7vw;
+    border-radius: 50px 0 50px  0;
 }
 button{
     background-color: rgba(83, 178, 237, 0.934);
     padding: 15px;
     font-size:15px;
+    border-radius: 10px;
     margin-top: 5px;
     color:rgba(0, 0, 0, 0.656);
     border:solid  rgba(0, 0, 0, 0.273) 1px;
-    border-radius: 10px;
     position: relative;
 }
 .container{

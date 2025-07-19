@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Cheat detection</title>
+</head>
+<body>
+   <div class=" py-5 text-center hero-sec backg black-cover">
+  <div class="black-cover">
+    <h1 class="display-5 fw-bold text-body-emphasis" style="color: white;">
+      SecureExam AI
+    </h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        A smart AI-powered solution to ensure exam integrity by detecting cheating behaviors in real-time. Using advanced face tracking and object detection, it alerts when suspicious activity occurs.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<a href="{{ url_for('rule') }}"><button>Get Started</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="container" style="max-width: 900px;">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+<img src="{{ url_for('static', filename='images/cheating3.png') }}" alt="Productivity">
+      <div class="carousel-caption d-none d-md-block bg">
+        <h5>Face Absence Detection</h5>
+        <p> Detects when the candidate's face is missing for more than a few seconds.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+<img src="{{ url_for('static', filename='images/productivity.png') }}" alt="Productivity">
+      <div class="carousel-caption d-none d-md-block bg">
+        <h5> Multiple People Detection</h5>
+        <p>Identifies presence of more than one person in the camera frame.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+<img src="{{ url_for('static', filename='images/cheating2.png') }}" alt="Productivity">
+      <div class="carousel-caption d-none d-md-block bg">
+        <h5>Lookaway & Phone Detection</h5>
+        <p>Detects if the candidate frequently looks away from the screen, which may indicate cheating.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+ </div>
+    <div class="container-fluid "> 
+        <footer class="py-3 my-4 cb"><p class="cb">
+            Our cheating detection system is an AI-powered proctoring solution that uses computer vision algorithms and real-time video analysis to identify suspicious behavior during online exams. It tracks the candidate’s face, gaze direction, and surroundings to detect anomalies like multiple people in the frame, device usage, or prolonged absence. Detected violations are logged with timestamps and alerts, providing examiners with evidence to ensure exam integrity and discourage malpractice.
+        </p>
+            <div class="line"></div>
+            <p class="text-center text-body-secondary cb">© 2025 team-nexus</p>
+         </footer> </div>  
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>   
+</body>
+</html>

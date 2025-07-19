@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+
+    <title>Rule</title>
+</head>
+<body>
+    <div class="hero-sec">
+    <div class="rules">
+            <h1>RULES</h1>
+        <p>
+            1️⃣ Be on time — join 15 min early and check your camera, mic, and internet.<Br>
+            2️⃣ Keep your webcam & mic ON at all times — sit alone in a well-lit room.<Br>
+            3️⃣ No gadgets allowed — no phones, smartwatches, headphones, or other devices.<Br>
+            4️⃣ Stay on the exam window — don’t open new tabs, apps, or look away repeatedly.<Br>
+            5️⃣ Don’t talk or leave — stay seated, no one else should be in the room.<Br>
+            6️⃣ Any cheating or suspicious behavior may lead to disqualification.<Br>
+        </p><br><Br>
+            <div class="btns">
+                 <a href="{{ url_for('connect') }}"><button>Start Exam</button></a>
+<a href="{{ url_for('home') }}"><button class="back-btn">Back</button></a>
+
+            </div>
+       
+
+    </div>
+     
+
+    </div>
+   
+</body>
+</html>

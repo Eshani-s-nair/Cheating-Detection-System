@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
     <title>connect</title>
 </head>
 <body>
     <div class="hero-sec">
         <div class="camera">
-         <img src="{{ url_for('video')  }}" width="500px" height="500px">
+         <img src="{{ url_for('video')  }}" width="1000px" height="700px">
              <br><br>
-        <button onclick="stopRecording()">Stop Recording</button>
+<button onclick="stopRecording()">Stop Recording</button>
 
+<script>
+  function stopRecording() {
+    fetch('/stop')
+      .then(response => {
+        if (response.redirected) {
+          // If Flask sends a redirect, follow it:
+          window.location.href = response.url;
+        } else {
+          alert("Recording stopped");
+          document.querySelector('img').src = "";
+        }
+      })
+      .catch(err => alert("Error stopping recording"));
+  }
+</script>
 <script>
     function stopRecording() {
         fetch('/stop')
